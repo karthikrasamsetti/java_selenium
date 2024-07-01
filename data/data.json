@@ -1,0 +1,24 @@
+{
+    "loginData":{
+        "user":"standard_user",
+        "lockeduser":"locked_out_user",
+        "password":"secret_sauce"
+    },
+    "assertionData":{
+        "loginHeading":"Swag Labs",
+        "loginError":"Sorry, this user has been locked out.",
+        "homeURL":"https://www.saucedemo.com/inventory.html",
+        "expectedText" : "Thank you for your order!",
+        "footerText":"© 2024 Sauce Labs. All Rights Reserved. Terms of Service | Privacy Policy",
+        "linkedInUrl":"https://www.saucedemo.com/inventory.html"
+    },
+    "firstname" : "John",
+    "lastname" : "Wick",
+    "pincode" : "512023",
+    "sidebar" : [
+        "All Items",
+        "About",
+        "Logout",
+        "Reset App State"
+    ]
+}

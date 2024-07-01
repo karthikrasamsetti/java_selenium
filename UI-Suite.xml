@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="UI Test Suite" parallel="tests"  thread-count="5">
+	<groups>
+		<run>
+			<include name="UIAutomation" />
+		</run>
+	</groups>
+	<listeners>
+		<listener class-name="com.feuji.listeners.TestListener" />
+	</listeners>
+	<test thread-count="5" verbose="2" preserve-order="true" name="ChromeTest">
+		<parameter name="browser" value="chrome"/>
+		<groups>
+			<run>
+				<include name="chrome" />
+			</run>
+		</groups>
+		<classes>
+			<class name="com.feuji.test.SauceTest">
+				<methods>
+					<include name="sauceLoginTest" />
+					<include name="sauceLoginTestNegative" />
+					<include name="sauceFilterTest"/>
+					<include name="sauceAddToCartTest"/>
+					<include name="removeProductsFromCart"/>
+					<include name="sauceCheckoutProductsTest"/>
+					<include name="sauceSideBarValidationTest"/>
+					<include name="testFooterValidation"/>
+					<include name="testValidateLinkedInTab"/>
+					<include name="testLogout"/>
+				</methods>
+			</class>
+		</classes>
+	</test>
+<!--	<test thread-count="5" verbose="2" preserve-order="true" name="EdgeTest">-->
+<!--		<parameter name="browser" value="edge"/>-->
+<!--		<groups>-->
+<!--			<run>-->
+<!--				<include name="edge" />-->
+<!--			</run>-->
+<!--		</groups>-->
+<!--		<classes>-->
+<!--			<class name="com.feuji.test.SauceTest">-->
+<!--				<methods>-->
+<!--					<include name="sauceLoginTest" />-->
+<!--					<include name="sauceLoginTestNegative" />-->
+<!--					<include name="sauceFilterTest"/>-->
+<!--					<include name="sauceAddToCartTest"/>-->
+<!--					<include name="removeProductsFromCart"/>-->
+<!--					<include name="sauceCheckoutProductsTest"/>-->
+<!--					<include name="sauceSideBarValidationTest"/>-->
+<!--					<include name="testFooterValidation"/>-->
+<!--					<include name="testValidateLinkedInTab"/>-->
+<!--					<include name="testLogout"/>-->
+<!--				</methods>-->
+<!--			</class>-->
+<!--		</classes>-->
+<!--	</test>-->
+</suite>

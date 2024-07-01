@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="API Test Suite">
+	<groups>
+		<run>
+			<include name="APIAutomation" />
+			<exclude name="UIAutomation"/>
+			<exclude name="chrome"/>
+			<exclude name="edge"/>
+		</run>
+	</groups>
+	<listeners>
+		<listener class-name="com.feuji.listeners.TestListener" />
+	</listeners>
+	<test verbose="2" preserve-order="true" name="APITest">
+		<classes>
+			<class name="com.feuji.test.RestAPITest">
+				<methods>
+					<include name="testGetAllBookings" />
+					<include name="testCreateBooking" />
+					<include name="testUpdateBookings" />
+					<include name="testDeleteBooking" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>

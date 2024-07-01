@@ -1,0 +1,9 @@
+reports/
+.settings/
+logs/
+test-output/
+target/
+.classpath
+.project
+.metadata/
+.idea/
